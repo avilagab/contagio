@@ -59,7 +59,7 @@ const rotationSpeed = 0.1; // rotación en radianes por segundo
 const zoomSpeed = 0.1;       // velocidad de oscilación zoom
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.01, 1000 );
 
 const renderer = new THREE.WebGLRenderer({
 	precision: 'mediump' 
@@ -550,5 +550,6 @@ function animateParticles(time) {
   particleSystem.geometry.attributes.position.needsUpdate = true;
 
 }
+
 
 
