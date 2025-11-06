@@ -61,7 +61,9 @@ const zoomSpeed = 0.1;       // velocidad de oscilación zoom
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({
+	precision: 'mediump' 
+});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
@@ -545,4 +547,5 @@ function animateParticles(time) {
     positions[i * 3 + 2] = basePositions[i * 3 + 2] + Math.sin(elapsed + i * 1.3) * 0.05; // movimiento Z
   }
   particleSystem.geometry.attributes.position.needsUpdate = true;
+
 }
