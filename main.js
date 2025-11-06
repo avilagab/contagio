@@ -6,7 +6,7 @@ import { BokehPass } from 'https://cdn.jsdelivr.net/npm/three@0.150.1/examples/j
 
 import GUI from 'lil-gui';
 
-const N = 250;
+const N = 100;
 const noise = new Noise(Math.random());
 
 const params = {
@@ -549,3 +549,4 @@ function animateParticles(time) {
   particleSystem.geometry.attributes.position.needsUpdate = true;
 
 }
+
