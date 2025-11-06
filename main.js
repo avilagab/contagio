@@ -65,6 +65,7 @@ const renderer = new THREE.WebGLRenderer({
 	precision: 'mediump' 
 });
 renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild( renderer.domElement );
 
 //POSTPROCESAMIENTO
@@ -549,4 +550,5 @@ function animateParticles(time) {
   particleSystem.geometry.attributes.position.needsUpdate = true;
 
 }
+
 
